@@ -1,44 +1,42 @@
 import React, {useMemo} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 import {useDropzone} from 'react-dropzone';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 import goingUpImage from './Images/going_up_rm.png'
 
 
 const useStyles = makeStyles({
   root: {
-    padding: "10px",
-    paddingLeft: "50px",
-    paddingRight: "50px"
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-    fontSize: 11,
-  },
-  dragndrop: {
-      borderStyle: "dotted",
-      borderColor: "grey",
-      borderWidth: "2px",
-      borderRadius: "5px",
-      padding: "40px",
+    paddingLeft: "40px",
+    paddingRight: "40px"
   },
   imageStyle: {
       width: "150px"
-  }
+  },
+  headerText: {
+      fontFamily: "roboto",
+      fontWeight: "lighter",
+      fontSize: 20,
+      textAlign: "center",
+      paddingBottom: 0
+  },
+  subheaderText: {
+    fontFamily: "roboto",
+    fontWeight: "lighter",
+    fontSize: 11,
+    color: "grey",
+    textAlign: "center"
+  },
+  button: {
+    margin: 10,
+    marginTop: 20,
+    left: "17%"
+  },
 });
 
 // For Dropzone:
@@ -55,7 +53,7 @@ const baseStyle = {
     backgroundColor: '#fafafa',
     color: '#bdbdbd',
     outline: 'none',
-    transition: 'border .24s ease-in-out'
+    transition: 'border .24s ease-in-out',
   };
   
   const activeStyle = {
@@ -72,18 +70,14 @@ const baseStyle = {
 
 export default function ImageUploadCard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography variant="h5" component="h5">
-          Upload your image
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          File should be Jpeg, Png, ...
-        </Typography>
+        <p className={classes.headerText}>Upload your image</p>
+        <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
         <StyledDropzone />
+
+        <UploadButton />
       </CardContent>
     </Card>
   );
@@ -118,4 +112,20 @@ function StyledDropzone(props) {
         </div>
       </div>
     );
+}
+
+function UploadButton() {
+    const classes = useStyles();
+
+    return(
+        <Button
+        variant="outlined"
+        color="primary"
+        size="small"
+        className={classes.button}
+        startIcon={<CloudUploadIcon />}
+      >
+        Choose Image
+      </Button>
+    )
 }
