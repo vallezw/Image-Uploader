@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   button: {
     margin: 10,
     marginTop: 20,
-    left: "17%"
+    left: "15%"
   },
 });
 
