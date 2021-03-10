@@ -8,11 +8,14 @@ import Typography from '@material-ui/core/Typography';
 
 import {useDropzone} from 'react-dropzone';
 
+import goingUpImage from './Images/going_up_rm.png'
 
 
 const useStyles = makeStyles({
   root: {
-    padding: "15px"
+    padding: "10px",
+    paddingLeft: "50px",
+    paddingRight: "50px"
   },
   bullet: {
     display: 'inline-block',
@@ -32,6 +35,9 @@ const useStyles = makeStyles({
       borderWidth: "2px",
       borderRadius: "5px",
       padding: "40px",
+  },
+  imageStyle: {
+      width: "150px"
   }
 });
 
@@ -84,12 +90,14 @@ export default function ImageUploadCard() {
 }
 
 function StyledDropzone(props) {
+    const classes = useStyles();
+
     const {
       getRootProps,
       isDragActive,
       isDragAccept,
       isDragReject
-    } = useDropzone({accept: 'image/*'});
+    } = useDropzone({accept: 'image/*', onDrop: (file) => {console.log(file);}});
   
     const style = useMemo(() => ({
       ...baseStyle,
@@ -106,6 +114,7 @@ function StyledDropzone(props) {
       <div className="container">
         <div {...getRootProps({style})}>
           <p>Drag 'n' drop your image here</p>
+          <img src={goingUpImage} alt="goingUpImage" className={classes.imageStyle} />
         </div>
       </div>
     );
