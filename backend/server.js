@@ -3,6 +3,8 @@ const fileUpload = require("express-fileupload");
 
 const app = express()
 
+var uuid = require('uuid');
+
 app.use(fileUpload());
 
 app.use("/uploads", express.static( __dirname + '/uploads'));
@@ -16,7 +18,8 @@ app.post("/upload", (req, res) => {
 
     const file = req.files.file;
     
-    file.mv(`${__dirname}/uploads/${file.name}`, err => {
+    fileName = uuid.v4() + '.' + file.name.split(".")[1]
+    file.mv(`${__dirname}/uploads/${fileName}`, err => {
         if(err) {
             console.error(err);
             return res.status(500).send(err);
