@@ -5,6 +5,7 @@ const app = express()
 
 app.use(fileUpload());
 
+app.use("/uploads", express.static( __dirname + '/uploads'));
 // Upload Endpoint
 app.post("/upload", (req, res) => {
     console.log("uploading");
