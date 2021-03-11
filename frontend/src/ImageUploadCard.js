@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-
+import axios from 'axios'
 import {useDropzone} from 'react-dropzone';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
@@ -82,6 +82,25 @@ export default function ImageUploadCard() {
   );
 }
 
+async function send_request(file) {
+  console.log(file);
+  const formData = new FormData()
+  formData.append("file", file)
+
+  try {
+    const res = await axios.post('/upload', formData, {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    })
+
+    console.log(res.data)
+  }
+  catch(err) {
+    console.error(err);
+  }
+}
+
 function StyledDropzone(props) {
     const classes = useStyles();
 
@@ -90,7 +109,7 @@ function StyledDropzone(props) {
       isDragActive,
       isDragAccept,
       isDragReject
-    } = useDropzone({accept: 'image/*', onDrop: (file) => {console.log(file);}});
+    } = useDropzone({accept: 'image/*', onDrop: (file) => {send_request(file[0])}});
   
     const style = useMemo(() => ({
       ...baseStyle,
@@ -124,10 +143,12 @@ function UploadButton() {
 
     const handleChange = event => {
       const fileUploaded = event.target.files[0];
-      if (!fileUploaded.name.match(/.(jpg|jpeg|png|gif)$/i))
+      if (!fileUploaded.name.match(/.(jpg|jpeg|png|gif)$/i)){
         alert('This is not an image!');
         // TODO: make a proper error message
         return
+      }
+      send_request(fileUploaded)
       console.log(fileUploaded);
     }
 
