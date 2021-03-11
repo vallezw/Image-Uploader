@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {Fragment, useMemo, useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   button: {
     margin: 10,
     marginTop: 20,
-    left: "15%"
+    left: "14%"
   },
 });
 
@@ -76,7 +76,6 @@ export default function ImageUploadCard() {
         <p className={classes.headerText}>Upload your image</p>
         <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
         <StyledDropzone />
-
         <UploadButton />
       </CardContent>
     </Card>
@@ -117,15 +116,35 @@ function StyledDropzone(props) {
 function UploadButton() {
     const classes = useStyles();
 
+    const inputFile = useRef(null) 
+
+    const onButtonClick = () => {
+        inputFile.current.click();
+    }
+
+    const handleChange = event => {
+      const fileUploaded = event.target.files[0];
+      if (!fileUploaded.name.match(/.(jpg|jpeg|png|gif)$/i))
+        alert('This is not an image!');
+        // TODO: make a proper error message
+        return
+      console.log(fileUploaded);
+    }
+
     return(
-        <Button
-        variant="outlined"
-        color="primary"
-        size="small"
-        className={classes.button}
-        startIcon={<CloudUploadIcon />}
-      >
-        Choose Image
-      </Button>
+        <Fragment>
+            <input type='file' id='file' ref={inputFile} style={{display: 'none'}} onChange={handleChange}/>
+            
+            <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            className={classes.button}
+            startIcon={<CloudUploadIcon />}
+            onClick={onButtonClick}
+        >
+            Choose Image
+        </Button>
+      </Fragment>
     )
 }
