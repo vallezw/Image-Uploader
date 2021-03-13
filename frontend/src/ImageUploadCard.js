@@ -82,25 +82,6 @@ export default function ImageUploadCard() {
   );
 }
 
-async function send_request(file) {
-  console.log(file);
-  const formData = new FormData()
-  formData.append("file", file)
-
-  try {
-    const res = await axios.post('/upload', formData, {
-      headers: {
-        "Content-Type": "multipart/form-data"
-      }
-    })
-
-    console.log(res.data)
-  }
-  catch(err) {
-    console.error(err);
-  }
-}
-
 function StyledDropzone(props) {
     const classes = useStyles();
 
@@ -143,13 +124,7 @@ function UploadButton() {
 
     const handleChange = event => {
       const fileUploaded = event.target.files[0];
-      if (!fileUploaded.name.match(/.(jpg|jpeg|png|gif)$/i)){
-        alert('This is not an image!');
-        // TODO: make a proper error message
-        return
-      }
       send_request(fileUploaded)
-      console.log(fileUploaded);
     }
 
     return(
@@ -168,4 +143,31 @@ function UploadButton() {
         </Button>
       </Fragment>
     )
+}
+
+
+async function send_request(file) {
+  console.log(file);
+  
+  if (file === undefined || !file.name.match(/.(jpg|jpeg|png|gif)$/i)){
+    alert('This is not an image!');
+    // TODO: make a proper error message
+    return
+  }
+
+  const formData = new FormData()
+  formData.append("file", file)
+
+  try {
+    const res = await axios.post('/upload', formData, {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    })
+
+    console.log(res.data)
+  }
+  catch(err) {
+    console.error(err);
+  }
 }
