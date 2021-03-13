@@ -1,4 +1,4 @@
-import React, {Fragment, useMemo, useRef} from 'react';
+import React, {Fragment, useMemo, useRef, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   root: {
     paddingLeft: "40px",
     paddingRight: "40px",
-    borderRadius: "10px"
+    borderRadius: "7px"
   },
   imageStyle: {
       width: "150px"
@@ -71,15 +71,29 @@ const baseStyle = {
 
 export default function ImageUploadCard() {
   const classes = useStyles();
+
+  const [loading, setLoading] = useState(false)
+
+
+  const handleLoading = () => {
+    setLoading(true)
+  }
+
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <p className={classes.headerText}>Upload your image</p>
-        <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
-        <StyledDropzone />
-        <UploadButton />
-      </CardContent>
-    </Card>
+    <div>
+      {!loading? 
+      <Card className={classes.root}>
+        <CardContent>
+          <p className={classes.headerText}>Upload your image</p>
+          <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
+          <StyledDropzone handleLoading={handleLoading} />
+          <UploadButton handleLoading={handleLoading} />
+        </CardContent>
+      </Card>
+      :
+      <h1>test</h1>
+      }
+    </div>
   );
 }
 
@@ -91,7 +105,9 @@ function StyledDropzone(props) {
       isDragActive,
       isDragAccept,
       isDragReject
-    } = useDropzone({accept: 'image/*', onDrop: (file) => {send_request(file[0])}});
+    } = useDropzone({accept: 'image/*', onDrop: (file) => {
+      send_request(file[0], props.handleLoading)
+    }});
   
     const style = useMemo(() => ({
       ...baseStyle,
@@ -114,7 +130,7 @@ function StyledDropzone(props) {
     );
 }
 
-function UploadButton() {
+function UploadButton(props) {
     const classes = useStyles();
 
     const inputFile = useRef(null) 
@@ -125,7 +141,7 @@ function UploadButton() {
 
     const handleChange = event => {
       const fileUploaded = event.target.files[0];
-      send_request(fileUploaded)
+      send_request(fileUploaded, props.handleLoading)
     }
 
     return(
@@ -147,9 +163,9 @@ function UploadButton() {
 }
 
 
-async function send_request(file) {
+async function send_request(file, handleLoading) {
   console.log(file);
-  
+  handleLoading()
   if (file === undefined || !file.name.match(/.(jpg|jpeg|png|gif)$/i)){
     alert('This is not an image!');
     // TODO: make a proper error message
