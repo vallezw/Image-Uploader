@@ -9,6 +9,8 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 import goingUpImage from './Images/going_up_rm.png'
 
+import { ClimbingBoxLoader } from 'react-spinners';
+
 
 const useStyles = makeStyles({
   root: {
@@ -91,7 +93,11 @@ export default function ImageUploadCard() {
         </CardContent>
       </Card>
       :
-      <h1>test</h1>
+      <ClimbingBoxLoader
+          color={'#6C63FF'}
+          size={15}
+          loading={loading} 
+        />
       }
     </div>
   );
@@ -165,7 +171,7 @@ function UploadButton(props) {
 
 async function send_request(file, handleLoading) {
   console.log(file);
-  handleLoading()
+  
   if (file === undefined || !file.name.match(/.(jpg|jpeg|png|gif)$/i)){
     alert('This is not an image!');
     // TODO: make a proper error message
@@ -174,6 +180,9 @@ async function send_request(file, handleLoading) {
 
   const formData = new FormData()
   formData.append("file", file)
+
+  // Change loading state in root component
+  handleLoading()
 
   try {
     const res = await axios.post('/upload', formData, {
