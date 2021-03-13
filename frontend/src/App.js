@@ -1,8 +1,8 @@
 import './App.css';
 
 // Components
-import ImageUploadCard from './ImageUploadCard'
-import Header from './Header'
+import ImageUploadCard from './Components/ImageUploadCard'
+import Header from './Components/Header'
 
 function App() {
   return (
