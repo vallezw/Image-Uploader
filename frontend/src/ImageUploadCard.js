@@ -13,7 +13,8 @@ import goingUpImage from './Images/going_up_rm.png'
 const useStyles = makeStyles({
   root: {
     paddingLeft: "40px",
-    paddingRight: "40px"
+    paddingRight: "40px",
+    borderRadius: "10px"
   },
   imageStyle: {
       width: "150px"
