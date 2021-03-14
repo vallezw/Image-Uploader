@@ -33,6 +33,11 @@ const rejectStyle = {
     borderColor: '#ff1744'
 };
 
+const textStyle = {
+  fontFamily: "Roboto",
+  fontWeight: "100",
+  fontSize: "14px"
+}
 
 
 export default function StyledDropzone(props) {
@@ -59,7 +64,7 @@ export default function StyledDropzone(props) {
     return (
       <div className="container">
         <div {...getRootProps({style})}>
-          <p>Drag 'n' drop your image here</p>
+          <p style={textStyle}>Drag 'n' drop your image here</p>
           <img src={goingUpImage} alt="goingUpImage" style={{width: "150px"}} />
         </div>
       </div>
