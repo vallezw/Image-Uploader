@@ -1,0 +1,25 @@
+
+.copyright {
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    font-family: "Roboto";
+    font-weight: lighter;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 2.5rem;  
+}
+
+a {
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    font-family: "Roboto";
+    font-weight: lighter;
+    text-decoration: none;
+    
+}
