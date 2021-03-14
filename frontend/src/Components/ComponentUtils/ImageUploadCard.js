@@ -42,6 +42,7 @@ export default function ImageUploadCard() {
   }
 
   const handleResponse = (value) => {
+    // TODO: React router auf uploaded page führen
     setLoading(false)
   }
 

@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
 
-import { sendRequest } from '../Utils/sendRequest'
-import goingUpImage from '../Images/going_up_rm.png'
+import { sendRequest } from '../../Utils/sendRequest'
+import goingUpImage from '../../Images/going_up_rm.png'
 
 
 const baseStyle = {

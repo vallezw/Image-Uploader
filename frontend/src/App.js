@@ -1,17 +1,12 @@
 import './App.css';
 
-// Components
-import ImageUploadCard from './Components/ImageUploadCard'
-import Header from './Components/Header'
+// Pages
+import UploadPage from './Components/Pages/UploadPage'
+import AboutPage from './Components/Pages/AboutPage'
 
 function App() {
   return (
-    <div className="container">
-    <Header />
-    <div className="cardContainer"> 
-      <ImageUploadCard />
-    </div>
-    </div>
+    <UploadPage />
   );
 }
 
