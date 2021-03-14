@@ -3,6 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+import { useHistory } from "react-router-dom";
+
+
 // Components
 import StyledDropzone from './StyledDropzone'
 import UploadButton from './UploadButton'
@@ -19,20 +22,26 @@ const useStyles = makeStyles({
       fontWeight: "lighter",
       fontSize: 20,
       textAlign: "center",
-      paddingBottom: 0
+      paddingBottom: 0,
+      lineHeight: "0em"
   },
   subheaderText: {
     fontFamily: "roboto",
     fontWeight: "lighter",
     fontSize: 11,
     color: "grey",
-    textAlign: "center"
+    textAlign: "center",
+    lineHeight: "0.7em",
+    paddingBottom: "20px"
   }
 });
 
 
 export default function ImageUploadCard() {
   const classes = useStyles();
+
+  // History for pushing to a new link after uploading image
+  const history = useHistory(); 
 
   const [loading, setLoading] = useState(false)
 
@@ -44,6 +53,8 @@ export default function ImageUploadCard() {
   const handleResponse = (value) => {
     // TODO: React router auf uploaded page führen
     setLoading(false)
+    history.push("/about")
+    
   }
 
 
