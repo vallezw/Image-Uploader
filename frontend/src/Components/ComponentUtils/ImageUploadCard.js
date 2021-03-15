@@ -52,8 +52,11 @@ export default function ImageUploadCard() {
 
   const handleResponse = (value) => {
     // TODO: React router auf uploaded page führen
-    setLoading(false)
-    history.push("/about")
+    
+    setTimeout(() => {
+      setLoading(false)
+      history.push("/about")
+    }, 2000)
     
   }
 

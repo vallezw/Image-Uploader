@@ -10,7 +10,8 @@
 
 .header {
   text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
   font-size: 40px;
   padding: 0;
   line-height: 0em;
