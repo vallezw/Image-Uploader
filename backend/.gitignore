@@ -11,7 +11,7 @@ pids
 lib-cov
 
 # Image safe point
-/uploads/*
+/upload/*
 
 # Coverage directory used by tools like istanbul
 coverage

@@ -15,7 +15,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
-    "uuid": "^8.3.2"
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",

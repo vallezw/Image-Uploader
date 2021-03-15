@@ -3,11 +3,11 @@ const fileUpload = require("express-fileupload");
 
 const app = express()
 
-var uuid = require('uuid');
+var shortid = require("shortid")
 
 app.use(fileUpload());
 
-app.use("/uploads", express.static( __dirname + '/uploads'));
+app.use("/uploads", express.static( __dirname + '/upload'));
 // Upload Endpoint
 app.post("/upload", (req, res) => {
     console.log("uploading");
@@ -18,14 +18,17 @@ app.post("/upload", (req, res) => {
 
     const file = req.files.file;
     
-    fileName = uuid.v4() + '.' + file.name.split(".")[1]
-    file.mv(`${__dirname}/uploads/${fileName}`, err => {
+    file_ending = file.name.split(".")
+    file_ending = file_ending[file_ending.length - 1]
+
+    fileName = shortid() + '.' + file_ending
+    file.mv(`${__dirname}/upload/${fileName}`, err => {
         if(err) {
             console.error(err);
             return res.status(500).send(err);
         }
 
-        res.json({ filePath: `/uploads/${fileName}`});
+        res.json({ filePath: `/upload/${fileName}`});
     })
 })
 
