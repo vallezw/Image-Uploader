@@ -1,9 +1,11 @@
 import axios from 'axios'
 
+import swal from 'sweetalert';
+
+
 export async function sendRequest(file, handleLoading, handleResponse) {
     if (file === undefined || !file.name.match(/.(jpg|jpeg|png|gif)$/i)){
-      alert('This is not an image!');
-      // TODO: make a proper error message
+      swal("Seems like your file wasn't an image", "Try again with a file ending like jpeg, png, etc", "error")
       return
     }
   

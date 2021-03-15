@@ -1,6 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router'
+
+import UploadedImage from '../ComponentUtils/UploadedImage'
 import Header from '../ComponentUtils/Header'
+
 
 function UploadedImagePage() {
     
@@ -10,7 +13,7 @@ function UploadedImagePage() {
     return (
         <div>
             <Header />
-            <img src={"http://localhost:5000/upload/" + image_url} alt="Uploaded image" />
+            <UploadedImage image_url={image_url}/>
         </div>
     )
 }

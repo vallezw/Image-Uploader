@@ -7,6 +7,14 @@
     transform: translate(-50%, -50%);
 }
 
+.swal-title {
+  font-family: "Roboto";
+}
+
+.swal-text {
+  font-family: "Roboto";
+}
+
 
 .header {
   text-align: center;
