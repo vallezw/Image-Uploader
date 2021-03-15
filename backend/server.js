@@ -7,7 +7,7 @@ var shortid = require("shortid")
 
 app.use(fileUpload());
 
-app.use("/uploads", express.static( __dirname + '/upload'));
+app.use("/upload", express.static( __dirname + '/upload'));
 // Upload Endpoint
 app.post("/upload", (req, res) => {
     console.log("uploading");
