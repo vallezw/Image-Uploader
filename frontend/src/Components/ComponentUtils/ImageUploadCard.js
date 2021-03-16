@@ -15,12 +15,14 @@ const useStyles = makeStyles({
   root: {
     paddingLeft: "40px",
     paddingRight: "40px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
     borderRadius: "7px",
     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
   },
   headerText: {
       fontFamily: "roboto",
-      fontWeight: "lighter",
+      fontWeight: "300",
       fontSize: 20,
       textAlign: "center",
       paddingBottom: 0,
@@ -28,7 +30,7 @@ const useStyles = makeStyles({
   },
   subheaderText: {
     fontFamily: "roboto",
-    fontWeight: "lighter",
+    fontWeight: "300",
     fontSize: 11,
     color: "grey",
     textAlign: "center",

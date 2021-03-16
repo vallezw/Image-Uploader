@@ -35,7 +35,7 @@ const rejectStyle = {
 
 const textStyle = {
   fontFamily: "Roboto",
-  fontWeight: "100",
+  fontWeight: "300",
   fontSize: "14px"
 }
 
