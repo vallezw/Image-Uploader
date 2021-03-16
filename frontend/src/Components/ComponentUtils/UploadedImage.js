@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { useParams } from 'react-router';
 
 import './Css/Image.css'
 
-export default class extends Component {
+export default class UploadedImage extends Component {
     state = {
       showModal: false,
       caption: '',
@@ -20,9 +19,9 @@ export default class extends Component {
                 id="myImg"
                 src={image_url}
                 onClick={() => {
-                    this.setState({ showModal: true, caption: "test", modalSrc: image_url});
+                    this.setState({ showModal: true, caption: "Uploaded", modalSrc: image_url});
                 }}
-                alt="test"
+                alt="Uploaded"
                 style={{ width: '100%', maxWidth: '300px' }}
                 />
             </div>
@@ -36,7 +35,7 @@ export default class extends Component {
                 <span className="close" onClick={() => this.setState({ showModal: false })}>
                     &times;
                 </span>
-                <img className="modal-content" id="img01" src={this.state.modalSrc} />
+                <img className="modal-content" id="img01" src={this.state.modalSrc} alt="Uploaded"/>
                 </div>
             </div>
             </div>

@@ -21,6 +21,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
   font-size: 40px;
+  color: whitesmoke;
   padding: 0;
   line-height: 0em;
 }
@@ -29,11 +30,15 @@
   line-height: 0em;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: lighter;
-  color: grey;
+  color: lightgrey;
 }
 
-body {
-  background-color: white;
+body { 
+  background: url(Images/background.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

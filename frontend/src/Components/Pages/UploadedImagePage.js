@@ -1,9 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router'
 
+// Components
 import UploadedImage from '../ComponentUtils/UploadedImage'
 import Header from '../ComponentUtils/Header'
-
+import Footer from '../ComponentUtils/Footer'
+import SocialMediaShareButtons from '../ComponentUtils/SocialMediaShareButtons'
 
 function UploadedImagePage() {
     
@@ -14,6 +16,8 @@ function UploadedImagePage() {
         <div>
             <Header />
             <UploadedImage image_url={image_url}/>
+            <SocialMediaShareButtons />
+            <Footer />
         </div>
     )
 }
