@@ -5,6 +5,9 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { useHistory } from "react-router-dom";
 
+import Box from '@material-ui/core/Box';
+
+
 
 // Components
 import StyledDropzone from './StyledDropzone'
@@ -15,7 +18,8 @@ const useStyles = makeStyles({
   root: {
     paddingLeft: "40px",
     paddingRight: "40px",
-    borderRadius: "7px"
+    borderRadius: "7px",
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
   },
   headerText: {
       fontFamily: "roboto",
@@ -64,14 +68,14 @@ export default function ImageUploadCard() {
   return (
     <div>
       {!loading? 
-      <Card className={classes.root}>
-        <CardContent>
-          <p className={classes.headerText}>Upload your image</p>
-          <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
-          <StyledDropzone handleLoading={handleLoading} handleResponse={handleResponse} />
-          <UploadButton handleLoading={handleLoading} handleResponse={handleResponse} />
-        </CardContent>
-      </Card>
+        <Card className={classes.root}>
+          <CardContent>
+            <p className={classes.headerText}>Upload your image</p>
+            <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
+            <StyledDropzone handleLoading={handleLoading} handleResponse={handleResponse} />
+            <UploadButton handleLoading={handleLoading} handleResponse={handleResponse} />
+          </CardContent>
+        </Card>
       :
         <Loading />
       }
