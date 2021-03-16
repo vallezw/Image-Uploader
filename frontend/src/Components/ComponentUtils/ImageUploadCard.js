@@ -5,9 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 
 import { useHistory } from "react-router-dom";
 
-import Box from '@material-ui/core/Box';
-
-
 
 // Components
 import StyledDropzone from './StyledDropzone'

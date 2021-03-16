@@ -19,8 +19,8 @@
 .header {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-weight: lighter;
   font-size: 40px;
+  font-weight: 100;
   color: whitesmoke;
   padding: 0;
   line-height: 0em;
@@ -30,8 +30,8 @@
   line-height: 0em;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: lighter;
-  color: lightgrey;
+  font-size: 13.5px;
+  font-weight: 300;
+  color: gainsboro;
 }
 
