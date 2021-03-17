@@ -5,6 +5,7 @@ import Footer from '../ComponentUtils/Footer'
 import Header from '../ComponentUtils/Headers/Header'
 import ImageUploadCard from '../ComponentUtils/ImageUploadCard'
 
+import Navbar from '../ComponentUtils/Headers/Navbar'
 
 import '../ComponentUtils/Css/Background.css'
 
@@ -12,7 +13,7 @@ function UploadPage() {
     return (
         <div className="allContainer">
             <div className="container">
-                <Header />
+                <Navbar />
                 <div className="cardContainer"> 
                     <ImageUploadCard />
                 </div>

@@ -1,11 +1,9 @@
 .cardContainer {
-    margin: 0;
+    
     position: absolute;
-    top: 50%;
-    left: 0%;
-    padding-left: 500px;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    padding-left: 8%;
+    
 }
 
 .swal-title {
