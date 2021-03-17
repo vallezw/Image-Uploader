@@ -6,6 +6,7 @@ import UploadPage from './Components/Pages/UploadPage'
 import AboutPage from './Components/Pages/AboutPage'
 import UploadedImage from './Components/Pages/UploadedImagePage';
 
+
 function App() {
   return (
     <Router>
