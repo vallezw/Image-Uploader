@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css'
 import Footer from '../ComponentUtils/Footer'
 
-import Header from '../ComponentUtils/Header'
+import Header from '../ComponentUtils/Headers/Header'
 import ImageUploadCard from '../ComponentUtils/ImageUploadCard'
 
 

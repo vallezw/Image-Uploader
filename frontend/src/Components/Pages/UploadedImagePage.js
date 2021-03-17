@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 
 // Components
 import UploadedImage from '../ComponentUtils/UploadedImage'
-import Header from '../ComponentUtils/Header'
+import Header from '../ComponentUtils/Headers/HeaderUploaded'
 import Footer from '../ComponentUtils/Footer'
 import SocialMediaShareButtons from '../ComponentUtils/SocialMediaShareButtons'
 

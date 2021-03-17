@@ -15,25 +15,3 @@
   font-family: "Roboto";
 }
 
-
-.header {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-  font-weight: 300;
-  color: whitesmoke;
-  padding: 0;
-  line-height: 0em;
-  text-shadow: 2px 2px 8px #000;
-}
-
-.subHeader {
-  line-height: 0em;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 13.5px;
-  font-weight: 300;
-  color: gainsboro;
-  text-shadow: 2px 2px 8px #000;
-}
-
