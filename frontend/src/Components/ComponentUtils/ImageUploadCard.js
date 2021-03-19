@@ -11,6 +11,8 @@ import StyledDropzone from './StyledDropzone'
 import UploadButton from './UploadButton'
 import Loading from './Loading';
 
+import '../../App.css'
+
 const useStyles = makeStyles({
   root: {
     paddingLeft: "40px",
@@ -67,16 +69,20 @@ export default function ImageUploadCard() {
   return (
     <div>
       {!loading? 
-        <Card className={classes.root}>
-          <CardContent>
-            <p className={classes.headerText}>Upload your image</p>
-            <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
-            <StyledDropzone handleLoading={handleLoading} handleResponse={handleResponse} />
-            <UploadButton handleLoading={handleLoading} handleResponse={handleResponse} />
-          </CardContent>
-        </Card>
+        <div className="cardContainer"> 
+          <Card className={classes.root}>
+            <CardContent>
+              <p className={classes.headerText}>Upload your image</p>
+              <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
+              <StyledDropzone handleLoading={handleLoading} handleResponse={handleResponse} />
+              <UploadButton handleLoading={handleLoading} handleResponse={handleResponse} />
+            </CardContent>
+          </Card>
+        </div>
       :
-        <Loading />
+        <div className="loadingContainer">
+          <Loading />
+        </div>
       }
     </div>
   );

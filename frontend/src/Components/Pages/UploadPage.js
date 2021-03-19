@@ -11,14 +11,10 @@ import '../ComponentUtils/Css/Background.css'
 function UploadPage() {
     return (
         <div className="allContainer">
-            <div className="container">
-                <Navbar />
-                <div className="cardContainer"> 
-                    <ImageUploadCard />
-                </div>
-                <div className="footerContainer">
-                    <Footer />
-                </div>
+            <Navbar />
+            <ImageUploadCard />
+            <div className="footerContainer">
+                <Footer />
             </div>
         </div>
     )

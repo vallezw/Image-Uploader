@@ -1,8 +1,7 @@
 .cardContainer {
     position: absolute;
-    z-index: 15;
     top: 40%;
-    left: 47%;
+    left: 48%;
     margin: -100px 0 0 -150px;
 }
 
@@ -14,3 +13,16 @@
   font-family: "Roboto";
 }
 
+.loadingContainer {
+  height: 10em;
+  position: relative
+}
+
+.loading {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
