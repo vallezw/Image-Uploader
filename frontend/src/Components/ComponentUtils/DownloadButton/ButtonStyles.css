@@ -6,6 +6,7 @@ button {
   
   button:focus{
     outline-color: transparent;
+    outline: none;
   }
   
   a {
@@ -63,4 +64,14 @@ button {
   .cta_download:active {
     transform: scale(0.96);
   }
-  
+
+
+.label {
+    color: #E8E8E8;
+}
+
+.filter-white {
+    filter: invert(100%) sepia(4%) saturate(41%) hue-rotate(117deg) brightness(113%) contrast(82%);
+
+
+}

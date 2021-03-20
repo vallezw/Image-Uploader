@@ -9,8 +9,8 @@ export const ButtonHover = props => {
     return (
         <button onClick={onClick}>
             <span className={className} disabled={isDisabled}>
-                <span>{label}</span>
-                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <span className="label">{label}</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10" className="filter-white">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
@@ -18,7 +18,7 @@ export const ButtonHover = props => {
         </button>
     )
 };
-// <polyline points="8 1 12 5 8 9"></polyline>
+
 ButtonHover.propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
