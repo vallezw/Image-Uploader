@@ -1,3 +1,6 @@
 .buttonContainer {
-    padding-top: 250px
+    height: auto;
+    margin: auto;
+    width: 25%;
+    padding-top: 100px
 }
