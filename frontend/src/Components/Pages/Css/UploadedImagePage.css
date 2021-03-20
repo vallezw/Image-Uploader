@@ -1,0 +1,4 @@
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+}

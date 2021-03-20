@@ -7,10 +7,11 @@ function UploadedImageUrl() {
     return (
         <div className="blockContainer">
             <CopyBlock
-                text={"http://localhost:3000/upload/CZakY4b0V.jpg"}
+                text={window.location.href}
                 language={"text"}
                 wrapLines
                 showLineNumbers={false}
+                highlight="1"
                 theme={atomOneDark}
                 className="block"
             />
