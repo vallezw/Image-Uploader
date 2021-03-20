@@ -3,9 +3,9 @@ import { useParams } from 'react-router'
 
 // Components
 import UploadedImage from '../ComponentUtils/UploadedImage'
-import Header from '../ComponentUtils/Headers/HeaderUploaded'
 import Footer from '../ComponentUtils/Footer'
-import SocialMediaShareButtons from '../ComponentUtils/SocialMediaShareButtons'
+import Navbar from '../ComponentUtils/Headers/Navbar'
+import UploadedImageUrl from '../ComponentUtils/UploadedImageUrl'
 
 function UploadedImagePage() {
     
@@ -13,10 +13,10 @@ function UploadedImagePage() {
     const { image_url } =  useParams()
 
     return (
-        <div>
-            <Header />
+        <div className="allContainer">
+            <Navbar />
             <UploadedImage image_url={image_url}/>
-            <SocialMediaShareButtons />
+            <UploadedImageUrl />
             <Footer />
         </div>
     )
