@@ -72,6 +72,4 @@ button {
 
 .filter-white {
     filter: invert(100%) sepia(4%) saturate(41%) hue-rotate(117deg) brightness(113%) contrast(82%);
-
-
 }
