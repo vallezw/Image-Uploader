@@ -1,7 +1,22 @@
+.buttonContainerContainer {
+    width: 50%;
+        /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    /* Safari and Chrome */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    /* W3C */
+    display: box;
+    box-pack: center;
+    box-align: center;
+
+} 
+
 .buttonContainer {
-    height: auto;
-    margin: auto;
-    width: 25%;
-    padding-top: 150px;
-    margin-right: 200px;
+    background-color: red;
+    width: 100%;
+
 }

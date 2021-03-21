@@ -10,8 +10,10 @@ function DownloadButton() {
     }
 
     return (
-        <div className="buttonContainer">
-            <ButtonHover onClick={handleClick}/>
+        <div className="buttonContainerContainer">
+            <div className="buttonContainer">
+                <ButtonHover onClick={handleClick}/>
+            </div>
         </div>
     )
 }

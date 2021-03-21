@@ -14,7 +14,7 @@ export default class UploadedImage extends Component {
         const image_url = this.props.image_url
 
         return (
-            <div>
+            <div className="boxContainer">
                 <div className="box">
                     <img
                     id="myImg"

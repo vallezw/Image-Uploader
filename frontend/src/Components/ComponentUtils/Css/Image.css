@@ -1,3 +1,8 @@
+.boxContainer {
+  width: 50%;
+}
+
+
 .box{
   height: auto;
   margin: auto;
