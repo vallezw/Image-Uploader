@@ -16,7 +16,6 @@
 } 
 
 .buttonContainer {
-    background-color: red;
-    width: 100%;
-
+    width: 50%;
+    padding-top: 100px;
 }

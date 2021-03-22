@@ -9,6 +9,7 @@ import Footer from '../ComponentUtils/Footer'
 import Navbar from '../ComponentUtils/Headers/Navbar'
 import UploadedImageUrl from '../ComponentUtils/UploadedImageUrl'
 import DownloadButton from '../ComponentUtils/DownloadButton/DownloadButton'
+import SocialMediaShareButtons from '../ComponentUtils/SocialMedia/SocialMediaShareButtons'
 
 function UploadedImagePage() {
     
@@ -18,11 +19,11 @@ function UploadedImagePage() {
     return (
         <div className="allContainer">
             <Navbar />
+            <UploadedImage image_url={image_url}/>
+            <SocialMediaShareButtons />
             <div className="rowContainer">
-                <UploadedImage image_url={image_url}/>
-                <DownloadButton />
+                <DownloadButton />                
             </div>
-            <UploadedImageUrl />
             <Footer />
         </div>
     )
