@@ -21,9 +21,6 @@ function UploadedImagePage() {
             <Navbar />
             <UploadedImage image_url={image_url}/>
             <SocialMediaShareButtons />
-            <div className="rowContainer">
-                <DownloadButton />                
-            </div>
             <Footer />
         </div>
     )

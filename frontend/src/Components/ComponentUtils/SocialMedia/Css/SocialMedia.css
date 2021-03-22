@@ -1,3 +1,13 @@
+.shareContainer {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    padding-top: 250px;
+    transform: translate(-50%, -50%);
+}
+
+
 i {
     opacity: 0;
     font-size: 28px;
@@ -56,7 +66,7 @@ i {
     transition: all 1.2s ease;
 }
 
-.container {
+.shareWrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -70,22 +80,22 @@ i {
     border-radius: 80px;
 }
 
-.container i:nth-of-type(1) {
+.shareWrap i:nth-of-type(1) {
             -webkit-transition-delay: 1.1s;
                     transition-delay: 1.1s;
 }
 
-.container i:nth-of-type(2) {
+.shareWrap i:nth-of-type(2) {
             -webkit-transition-delay: .9s;
                     transition-delay: .9s;
 }
 
-.container i:nth-of-type(3) {
+.shareWrap i:nth-of-type(3) {
             -webkit-transition-delay: .7s;
                     transition-delay: .7s;
 }
 
-.container i:nth-of-type(4) {
+.shareWrap i:nth-of-type(4) {
             -webkit-transition-delay: .4s;
                     transition-delay: .4s;
 }
