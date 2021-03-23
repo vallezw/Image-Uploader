@@ -19,8 +19,10 @@ function UploadedImagePage() {
     return (
         <div className="allContainer">
             <Navbar />
-            <UploadedImage image_url={image_url}/>
-            <SocialMediaShareButtons />
+            <div className="rootUploadWrap">
+                <UploadedImage image_url={image_url}/>
+                <SocialMediaShareButtons />
+            </div>
             <Footer />
         </div>
     )
