@@ -3,7 +3,7 @@ import './Css/SocialMedia.css'
 
 function SocialMediaShareButtons() {
     return (
-        <div className="shareContainer">
+        
             <div className="btn_wrap">
                 <span className="socialSpan">Share</span>
                 <div class="shareWrap">
@@ -14,7 +14,7 @@ function SocialMediaShareButtons() {
                     <i class="fas fa-download"></i>
                 </div>
             </div>
-        </div>
+        
     )
 }
 

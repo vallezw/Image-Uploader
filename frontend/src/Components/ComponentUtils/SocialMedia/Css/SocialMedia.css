@@ -1,7 +1,3 @@
-.shareContainer {
-}
-
-
 i {
     opacity: 0;
     font-size: 28px;
@@ -108,9 +104,3 @@ i {
 }
 
 
-.dr {
-position: absolute;
-  bottom: 16px; 
-  right: 16px;
-  width:100px;
-}

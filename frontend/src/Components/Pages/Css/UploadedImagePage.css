@@ -3,9 +3,8 @@
     flex-direction: row;
 }
 
-.rootUploadWrap {    
-    height: auto;
-    margin: auto;
-    width: 20%;
-    padding-top: 100px;
+.rootUploadWrap {     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
