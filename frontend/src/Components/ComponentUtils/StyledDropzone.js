@@ -46,7 +46,7 @@ export default function StyledDropzone(props) {
       isDragActive,
       isDragAccept,
       isDragReject
-    } = useDropzone({accept: 'image/*', onDrop: (file) => {
+    } = useDropzone({accept: 'image/jpeg, image/png, image/gif', onDrop: (file) => {
       sendRequest(file[0], props.handleLoading, props.handleResponse)
     }});
   
