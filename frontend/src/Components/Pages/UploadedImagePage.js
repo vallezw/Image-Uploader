@@ -7,8 +7,6 @@ import './Css/UploadedImagePage.css'
 import UploadedImage from '../ComponentUtils/UploadedImage'
 import Footer from '../ComponentUtils/Footer'
 import Navbar from '../ComponentUtils/Headers/Navbar'
-import UploadedImageUrl from '../ComponentUtils/UploadedImageUrl'
-import DownloadButton from '../ComponentUtils/DownloadButton/DownloadButton'
 import SocialMediaShareButtons from '../ComponentUtils/SocialMedia/SocialMediaShareButtons'
 
 function UploadedImagePage() {

@@ -107,13 +107,14 @@ i {
             transform: scale(1);
 }
 
-
-
-
 .iconButton {
     cursor: pointer;
+    border: none;
 }
 
+.iconButton:focus {
+    outline: none;
+}
   
 .iconButton:after {
 content: "";
