@@ -28,7 +28,7 @@
     max-height: 60vh;
 
     /* For transparent images: */
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(255, 255, 255, 1);
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Box shadow for the image */
   }
