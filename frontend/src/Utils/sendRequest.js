@@ -28,7 +28,6 @@ export async function sendRequest(file, handleLoading, handleResponse) {
         }
       })
   
-      console.log("handle response");
       handleResponse(res)
       
     }
