@@ -22,6 +22,7 @@ export default class UploadedImage extends Component {
                             this.setState({ showModal: true, caption: "Uploaded", modalSrc: image_url});
                         }}
                         alt="Uploaded"
+                        onError={() => this.props.imageNotFound()}
                             />
         
                     <div
