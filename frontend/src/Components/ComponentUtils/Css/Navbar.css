@@ -15,10 +15,14 @@ header {
     flex-direction: row;
 }
 
+.logo p {
+    padding-top: 2px;
+}
+
 .imageNav {
     margin-top: 10px;
     width: 50px;
-    height: 45px;
+    height: 50px;
     padding-right: 15px;
 }
 
