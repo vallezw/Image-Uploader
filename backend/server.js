@@ -32,4 +32,8 @@ app.post("/upload", (req, res) => {
     })
 })
 
+app.get("/download/:id", function (req, res) {
+    res.download(`./upload/${req.params.id}`);
+});
+
 app.listen(5000, () => console.log("Server Started..."))
