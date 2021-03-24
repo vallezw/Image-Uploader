@@ -25,7 +25,7 @@ function UploadedImagePage() {
                 <Navbar />
                 <div className="rootUploadWrap">
                     <UploadedImage image_url={image_url} imageNotFound={() => setImageFound(false)}/>
-                    <SocialMediaShareButtons />
+                    <SocialMediaShareButtons image_url={image_url}/>
                 </div>
                 <Footer />
             </div>

@@ -58,8 +58,7 @@ export default function ImageUploadCard() {
   }
 
   const handleResponse = (value) => {
-    // TODO: React router auf uploaded page führen
-    console.log(value)
+    // Router push to uploadd page
     setTimeout(() => {
       setLoading(false)
       history.push(value.data.filePath)
@@ -69,8 +68,6 @@ export default function ImageUploadCard() {
         showConfirmButton: false,
         timer: 1500
       })
-      //swal("Your file was succesfully uploaded", "You can share your file all over the internet now!", "success")
-      
     }, 2000)
     
   }

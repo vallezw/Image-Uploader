@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Css/SocialMedia.css'
 
-const URL = window.location.href
-
-const SERVER_URL = "http://localhost:5000/download/" + URL.split('/upload/')[1]
-// TODO: Make it not hardcoded
-const TEXT = `Hey, look at this cool image I uploaded!`
-
-function SocialMediaShareButtons() {
-    return (
-        
+export default class SocialMediaShareButtons extends Component {
+    render() {
+        const path = this.props.image_url
+        const URL = `http://localhost:3000/${path}`
+        const SERVER_URL = `http://localhost:5000/download/${path}`
+        const TEXT = `Hey, look at this cool image I uploaded!`
+        return (
             <div className="btn_wrap">
                 <span className="socialSpan">Share</span>
                 <div className="shareWrap">
@@ -22,6 +20,6 @@ function SocialMediaShareButtons() {
             </div>
         
     )
+    }
 }
 
-export default SocialMediaShareButtons
