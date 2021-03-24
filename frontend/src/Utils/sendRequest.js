@@ -1,12 +1,17 @@
 import axios from 'axios'
 
-import swal from 'sweetalert';
+//import swal from 'sweetalert';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 
 export async function sendRequest(file, handleLoading, handleResponse) {
     if (file === undefined || !file.name.match(/.(jpg|jpeg|png|gif)$/i)){
-      // TODO: Change styles
-      swal("Seems like your file wasn't an image", "Try again with a file ending like jpeg, png, etc", "error")
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Seems like you didnt submit an image.',
+      })
+      
       return
     }
   

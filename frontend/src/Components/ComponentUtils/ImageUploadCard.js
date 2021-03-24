@@ -4,7 +4,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import { useHistory } from "react-router-dom";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 
 // Components
@@ -60,10 +61,16 @@ export default function ImageUploadCard() {
     // TODO: React router auf uploaded page führen
     console.log(value)
     setTimeout(() => {
-      
-      swal("Your file was succesfully uploaded", "You can share your file all over the internet now!", "success")
       setLoading(false)
       history.push(value.data.filePath)
+      Swal.fire({
+        icon: 'success',
+        title: "Your image was uploaded!",
+        showConfirmButton: false,
+        timer: 1500
+      })
+      //swal("Your file was succesfully uploaded", "You can share your file all over the internet now!", "success")
+      
     }, 2000)
     
   }
