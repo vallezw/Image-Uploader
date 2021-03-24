@@ -8,9 +8,11 @@ var shortid = require("shortid")
 app.use(fileUpload());
 
 app.use("/upload", express.static( __dirname + '/upload'));
+
+var findRemoveSync = require('find-remove');
+
 // Upload Endpoint
 app.post("/upload", (req, res) => {
-    console.log("uploading");
     if(req.files === null){
         console.log("no file uploaded");
         return res.status(400).json({ msg: "No file uploaded" })
@@ -36,4 +38,8 @@ app.get("/download/:id", function (req, res) {
     res.download(`./upload/${req.params.id}`);
 });
 
+
+// Delete images which are older than 1 Week (604800 seconds) every day (86400 seconds)
+setInterval(findRemoveSync.bind(this, __dirname + '/upload', { age: {seconds: 604800}, extensions: ['.jpg', '.jpeg', '.png', '.gif']}), 86400)
 app.listen(5000, () => console.log("Server Started..."))
+
