@@ -1,20 +1,23 @@
 .boxContainer {
-  width: fit-content;
-  height: fit-content;
+  width: max-content;
+  height: max-content;
 }
 
 .box{
-  
+  width: max-content;
+  height: max-content;
 } 
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {
-    display: block;  
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     width: auto;
-    position: absolute;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     max-height: 60%;
     max-width: 40%;

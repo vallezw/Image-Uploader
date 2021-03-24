@@ -15,7 +15,6 @@ export default class UploadedImage extends Component {
 
         return (
                 <Fragment>
-                    <div className="box">
                         <img
                         id="myImg"
                         src={image_url}
@@ -24,7 +23,6 @@ export default class UploadedImage extends Component {
                         }}
                         alt="Uploaded"
                             />
-                    </div>
         
                     <div
                         id="myModal"
