@@ -9,7 +9,7 @@ export async function sendRequest(file, handleLoading, handleResponse) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Seems like you didnt submit an image.',
+        text: 'Seems like you didn\'t submit an image.',
       })
       
       return
