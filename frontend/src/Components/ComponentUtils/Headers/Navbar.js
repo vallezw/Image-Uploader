@@ -7,7 +7,7 @@ import logo from '../../../Images/logo.png'
 function Navbar() {
     return (
         <header>
-            <div className="logo"><a className="logo" href="/"><img src={logo} className="imageNav"/><p className="logo">Image Uploader</p></a></div>
+            <div className="logo"><a className="logo" href="/"><img src={logo} className="imageNav" alt="Logo"/><p className="logo">Image Uploader</p></a></div>
             <nav>
                 <ul className="nav__links">
                     <li><a href="http://github.com/vallezw/Image-Uploader">About</a></li>
