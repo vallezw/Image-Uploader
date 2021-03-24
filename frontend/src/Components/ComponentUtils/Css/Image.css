@@ -10,17 +10,23 @@
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {
+    margin-top: 100px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: auto;
+    
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    /* Style image size */
+    width: auto;
     height: auto;
-    max-height: 60%;
-    max-width: 40%;
+    
+    max-width: 60vh;
+    max-height: 60vh;
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Box shadow for the image */
   }
   

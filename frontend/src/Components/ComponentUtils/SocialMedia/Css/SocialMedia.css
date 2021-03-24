@@ -10,6 +10,10 @@ i {
 }
 
 .btn_wrap {
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
