@@ -56,13 +56,13 @@
 
 <img src="docs/images/screenshot.png" alt="Logo" width="6000">
 
-There are already a few image uploader out there in the internet, however, I didn't find any uploader which is fully open source, lightweight and made for self hosting. So I created one and hope you can enjoy it.
+There are already a few image uploader out there in the internet, however, I didn't find any uploader which is fully open source, lightweight and made for self hosting. So I created one myself and hope you can enjoy it.
 
 You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this project!
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section should list any major frameworks that you built your project using.
 * [React](https://reactjs.org/)
 * [Express](https://expressjs.com/de/)
 * [Material-UI](https://material-ui.com/)
@@ -70,17 +70,65 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+There are 2 ways on how to host this project. You can either use [docker](https://www.docker.com/) or host it with [node](https://nodejs.org/en/). I would highly recommend hosting it with docker since it's more effective for your system.
 
-### Prerequisites
+### Hosting it with Docker
+#### Setting it up
+In order to host the project you will need to create a docker-compose file, docker-compose files are combining multiple docker images to interact with each other.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+The file needs to be called `docker-compose.yml` paste the following code in the file or just download the [file](https://github.com/vallezw/Image-Uploader/blob/master/docker-compose.yml) from the repo.
 
+Insert in `docker-compose.yml`:
+```yml
+version: "3.8"
+services:
+    frontend:
+        image: vallezw/image-uploader-client
+        ports:
+            - "80:80"
+        build: 
+            context: ./frontend
+            dockerfile: ./Dockerfile
+        depends_on:
+            - "backend"
+        environment:
+            - "API_URL=http://localhost:5000"
+            - "CLIENT_URL=http://localhost"
+        container_name: "frontend"
+
+    backend:
+        image: vallezw/image-uploader-backend 
+        ports:
+            - "5000:5000"
+        build:
+            context: ./backend
+            dockerfile: ./Dockerfile
+        container_name: backend
+```
+
+#### Run the docker file
+Once you finished setting up the file you can go ahead and host it with
+
+1. Building
+   ```sh
+   docker-compose build
+   ```
+2. Hosting the project
+   ```sh
+   docker-compose up
+   ```
+
+#### Change domain
+In case you want to host the project on a custom domain, you need to change the env variables for the project to continue working.
+
+To do that just go in the `docker-compose.yml` file and change `API_URL` and `CLIENT_URL` to your custom domain.
+
+```yml
+...
+environment:
+            - "API_URL=your_custom_backend_url"
+            - "CLIENT_URL=your_custom_client_url"
+```
 ### Installation
 
 1. Get a free API Key at [https://example.com](https://example.com)
@@ -140,5 +188,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Valentin Zwerschke - v.zwerschke@mail.de
 
-Project Link: 
-[https://github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
+Project Link: [https://github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
