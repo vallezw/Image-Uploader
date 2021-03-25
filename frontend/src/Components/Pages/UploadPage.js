@@ -12,9 +12,6 @@ function UploadPage() {
     return (
         <div className="allContainer">
             <Navbar />
-            <h1>TEST</h1>
-            <h1>API_URL: {window._env_.API_URL}</h1>
-            <h1>CLIENT_URL: {window._env_.CLIENT_URL}</h1>
             <ImageUploadCard />
             <div className="footerContainer">
                 <Footer />

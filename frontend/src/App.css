@@ -5,18 +5,13 @@
     margin: -100px 0 0 -150px;
 }
 
-.loadingContainer {
-  height: 10em;
-  position: relative
-}
-
 .loading {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) 
+  margin-top: 40vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0%;
+
 }
 
 body {
