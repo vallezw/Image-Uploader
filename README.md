@@ -8,7 +8,7 @@
   <h3 align="center">Image Uploader</h3>
 
   <p align="center">
-    An open source self hosted image uploader
+    An open source, self hosted image uploader
     <br />
     <a href="https://github.com/vallezw/Image-Uploader/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
