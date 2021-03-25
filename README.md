@@ -36,7 +36,18 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#hosting-it-with-docker">Hosting it with Docker</a></li>
+        <ul>
+            <li>   
+            <a href="#setting-it-up">Setting it up</a>
+            </li>
+            <li>   
+            <a href="#run-the-docker-file">Run the docker file</a>
+            </li>
+            <li>   
+            <a href="#changing-the-url-2-1-3">Changing the URL</a>
+            </li>
+        </ul>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -140,7 +151,7 @@ This is the option for those who don't want to host it with docker.
    ```sh
    npm run build
    ```
-#### Changing URL
+#### Changing the URL
 In case you want to change the URL you have to change the env variables.
 1. Go into the frontend directory and open the `.env` file
 2. Change the `API_URL` and the `CLIENT_URL` to your specific usecase 
@@ -153,9 +164,7 @@ After that you are good to go and host it on your custom domain
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
+See the [open issues](https://github.com/vallezw/Image-Uploader/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
