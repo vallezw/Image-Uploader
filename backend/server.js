@@ -7,9 +7,22 @@ var shortid = require("shortid")
 
 app.use(fileUpload());
 
-app.use("/upload", express.static( __dirname + '/upload'));
-
 var findRemoveSync = require('find-remove');
+
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', req.get('Origin') || '*');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+    res.header('Access-Control-Expose-Headers', 'Content-Length');
+    res.header('Access-Control-Allow-Headers', 'Accept, Authorization, Content-Type, X-Requested-With, Range');
+    if (req.method === 'OPTIONS') {
+      return res.send(200);
+    } else {
+      return next();
+    }
+  });
+
+app.use("/upload", express.static( __dirname + '/upload'));
 
 // Upload Endpoint
 app.post("/upload", (req, res) => {
@@ -17,7 +30,7 @@ app.post("/upload", (req, res) => {
         console.log("no file uploaded");
         return res.status(400).json({ msg: "No file uploaded" })
     }
-
+    
     const file = req.files.file;
     
     file_ending = file.name.split(".")
@@ -34,12 +47,15 @@ app.post("/upload", (req, res) => {
     })
 })
 
-app.get("/download/:id", function (req, res) {
+app.get("/download/:id", (req, res)  => {
     res.download(`./upload/${req.params.id}`);
 });
+
+app.get("/test", (req, res) => {
+    res.json({"test": "test"})
+})
 
 
 // Delete images which are older than 1 Week (604800 seconds) every day (86400 seconds)
 setInterval(findRemoveSync.bind(this, __dirname + '/upload', { age: {seconds: 604800}, extensions: ['.jpg', '.jpeg', '.png', '.gif']}), 86400)
 app.listen(5000, () => console.log("Server Started..."))
-

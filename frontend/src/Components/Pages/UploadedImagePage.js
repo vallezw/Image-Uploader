@@ -15,7 +15,7 @@ function UploadedImagePage() {
     
     // Get the uploaded image url by url
     const { image_url } =  useParams()
-
+    console.log(image_url);
     const [imageFound, setImageFound] = useState(true)
 
     return (
