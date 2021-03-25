@@ -9,6 +9,7 @@ import FZF from './Components/Pages/404Page.js'
 function App() {
   return (
     <Router>
+      <h1>API_URL: {window._env_.API_URL}</h1>
       <Switch>
         <Route path="/" exact component={UploadPage} />
         <Route path="/upload/:image_url" component={UploadedImage} />
