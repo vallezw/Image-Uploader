@@ -7,7 +7,9 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm run dev --prefix ../frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client-build": "cd ../frontend && npm run build && serve -s build -l 80",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "concurrently \"npm run server\" \"npm run client-build\""
   },
   "keywords": [],
   "author": "",
