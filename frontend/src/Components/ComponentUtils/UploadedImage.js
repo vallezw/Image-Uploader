@@ -11,8 +11,7 @@ export default class UploadedImage extends Component {
     };
   
     render() {
-        // TODO: Make env var
-        const image_url = "http://localhost:5000/upload/" + this.props.image_url
+        const image_url = window._env_.API_URL + "/upload/" + this.props.image_url
         
         return (
                 <Fragment>

@@ -4,8 +4,8 @@ import './Css/SocialMedia.css'
 export default class SocialMediaShareButtons extends Component {
     render() {
         const path = this.props.image_url
-        const URL = `http://localhost:3000/upload/${path}`
-        const SERVER_URL = `http://localhost:5000/download/${path}`
+        const URL = `${window._env_.CLIENT_URL}/upload/${path}`
+        const SERVER_URL = `${window._env_.API_URL}/download/${path}`
         const TEXT = `Hey, look at this cool image I uploaded!`
         return (
             <div className="btn_wrap">

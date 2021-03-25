@@ -22,7 +22,7 @@ export async function sendRequest(file, handleLoading, handleResponse) {
     handleLoading()
   
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post(window._env_.API_URL + '/upload', formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
