@@ -70,7 +70,7 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-There are 2 ways on how to host this project. You can either use [docker](https://www.docker.com/) or host it with [node](https://nodejs.org/en/). I would highly recommend hosting it with docker since it's more effective for your system.
+There are 2 ways on how to host this project. You can either use [docker](https://www.docker.com/) or host it with [node](https://nodejs.org/en/). I would highly suggest hosting it with docker since it's more effective for your system.
 
 ### Hosting it with Docker
 #### Setting it up
@@ -107,7 +107,7 @@ services:
 ```
 
 #### Run the docker file
-Once you finished setting up the file you can go ahead and host it with
+Once you finished setting up the file you can go ahead and run it with
 
 1. Building
    ```sh
@@ -118,35 +118,37 @@ Once you finished setting up the file you can go ahead and host it with
    docker-compose up
    ```
 
-#### Change domain
-In case you want to host the project on a custom domain, you need to change the env variables for the project to continue working.
-
-To do that just go in the `docker-compose.yml` file and change `API_URL` and `CLIENT_URL` to your custom domain.
+#### Changing the URL
+In case you want to host the project without Docker you can do that too.
 
 ```yml
 ...
 environment:
-            - "API_URL=your_custom_backend_url"
-            - "CLIENT_URL=your_custom_client_url"
+    - "API_URL=http://your_api_url:your_port"
+    - "CLIENT_URL=http://your_client_url:your_port"
 ```
-### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+After that you are good to go and host it on your custom domain
+### Hosting with Node
+#### Running the project
+This is the option for those who don't want to host it with docker.
+1. Go into the backend directory with a terminal/supershell
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   cd backend/
    ```
-3. Install NPM packages
+2. Build and run it
    ```sh
-   npm install
+   npm run build
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+#### Changing URL
+In case you want to change the URL you have to change the env variables.
+1. Go into the frontend directory and open the `.env` file
+2. Change the `API_URL` and the `CLIENT_URL` to your specific usecase 
+   ```env
+    API_URL=http://your_api_url:your_port
+    CLIENT_URL=http://your_client_url:your_port
    ```
-
-
-
+After that you are good to go and host it on your custom domain
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -186,6 +188,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Valentin Zwerschke - v.zwerschke@mail.de
+Valentin Zwerschke - [github.com/vallezw](https://github.com/vallezw)
 
-Project Link: [https://github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
+Project Link: [github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
