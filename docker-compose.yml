@@ -12,7 +12,7 @@ services:
         
         environment:
             - "API_URL=http://localhost:5000"
-            - "CLIENT_URL=http://localhost:73"
+            - "CLIENT_URL=http://localhost"
         container_name: "frontend"
     backend:
         image: vallezw/image-uploader-backend 
