@@ -149,14 +149,6 @@ In case you want to change the URL you have to change the env variables.
     CLIENT_URL=http://your_client_url:your_port
    ```
 After that you are good to go and host it on your custom domain
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -176,18 +168,14 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Valentin Zwerschke - [github.com/vallezw](https://github.com/vallezw)
+Valentin Zwerschke - [github.com/vallezw](https://github.com/vallezw) - v.zwerschke@mail.de
 
 Project Link: [github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
