@@ -70,10 +70,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<video controls="controls" loop>
-  <source type="video/mp4" src="docs/videos/example-video.mp4"></source>
-</video>
-
+![Example Video](docs/images/example-video.gif)
 <!-- <img src="docs/images/screenshot.png" alt="Logo" width="6000"> -->
 
 There are already a few image uploader out there in the internet, however, I didn't find any uploader which is fully open source, lightweight and made for self hosting. So I created one myself and hope you can enjoy it.
