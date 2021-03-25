@@ -45,18 +45,24 @@
             <a href="#run-the-docker-file">Run the docker file</a>
             </li>
             <li>   
-            <a href="#changing-the-url-2-1-3">Changing the URL</a>
+            <a href="#changing-the-url">Changing the URL</a>
             </li>
         </ul>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#hosting-with-node">Hosting with Node</a></li>
+        <ul>
+            <li>   
+            <a href="#run-the-docker-file">Run the docker file</a>
+            </li>
+            <li>   
+            <a href="#changing-the-url-1">Changing the URL</a>
+            </li>
+        </ul>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
