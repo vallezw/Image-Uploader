@@ -93,7 +93,7 @@ There are 2 ways on how to host this project. You can either use [docker](https:
 #### Setting it up
 In order to host the project you will need to create a docker-compose file, docker-compose files are combining multiple docker images to interact with each other.
 
-The file needs to be called `docker-compose.yml` paste the following code in the file or just download the [file](https://github.com/vallezw/Image-Uploader/blob/master/docker-compose.yml) from the repo.
+The file needs to be called `docker-compose.yml` paste the following code in the file.
 
 Insert in `docker-compose.yml`:
 ```yml
@@ -106,11 +106,13 @@ services:
         environment:
             - "API_URL=http://localhost:5000"
             - "CLIENT_URL=http://localhost"
-
+        
     backend:
         image: vallezw/image-uploader-backend 
         ports:
             - "5000:5000"
+        volumes:
+            - .upload/:/usr/src/app/upload
 ```
 
 #### Run the docker file
