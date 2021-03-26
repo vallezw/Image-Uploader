@@ -22,4 +22,5 @@ services:
             context: ./backend
             dockerfile: ./Dockerfile
         container_name: backend
-
+        volumes:
+            - .upload/:/usr/src/app/upload
