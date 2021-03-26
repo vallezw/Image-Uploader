@@ -56,6 +56,6 @@ app.get("/test", (req, res) => {
 })
 
 
-// Delete images which are older than 1 Week (604800 seconds) every day (86400 seconds)
-setInterval(findRemoveSync.bind(this, __dirname + '/upload', { age: {seconds: 604800}, extensions: ['.jpg', '.jpeg', '.png', '.gif']}), 86400)
+// In case you want to delete images which are older than 1 Week (604800 seconds) every day (86400 seconds): 
+// setInterval(findRemoveSync.bind(this, __dirname + '/upload', { age: {seconds: 604800}, extensions: ['.jpg', '.jpeg', '.png', '.gif']}), 86400)
 app.listen(5000, () => console.log("Server Started..."))
