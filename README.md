@@ -103,24 +103,14 @@ services:
         image: vallezw/image-uploader-client
         ports:
             - "80:80"
-        build: 
-            context: ./frontend
-            dockerfile: ./Dockerfile
-        depends_on:
-            - "backend"
         environment:
             - "API_URL=http://localhost:5000"
             - "CLIENT_URL=http://localhost"
-        container_name: "frontend"
 
     backend:
         image: vallezw/image-uploader-backend 
         ports:
             - "5000:5000"
-        build:
-            context: ./backend
-            dockerfile: ./Dockerfile
-        container_name: backend
 ```
 
 #### Run the docker file
