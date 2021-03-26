@@ -149,7 +149,7 @@ After that you are good to go and host it on your custom domain
 ### Hosting with Node
 #### Running the project
 This is the option for those who don't want to host it with docker.
-1. Go into the backend directory with a terminal/supershell
+1. Go into the backend directory with a terminal/powershell
    ```sh
    cd backend/
    ```
