@@ -5,9 +5,9 @@ const app = express()
 
 var shortid = require("shortid")
 
-app.use(fileUpload());
-
 var findRemoveSync = require('find-remove');
+
+app.use(fileUpload());
 
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', req.get('Origin') || '*');
