@@ -37,7 +37,7 @@ i {
 }
 
 .btn_wrap:hover {
-    transition-delay: .4s;
+    /* transition-delay: .4s; */
     -webkit-transform: scale(1.1);
             transform: scale(1.1)
 }
