@@ -10,7 +10,7 @@ function FZF() {
         <div className="allContainerNoBackground">
             <Navbar />
                
-            <div class="container">
+            <div class="container404">
             <xml version="1.0" encoding="UTF-8" />
             <svg class="page404" viewBox="0 0 5059 4833" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
