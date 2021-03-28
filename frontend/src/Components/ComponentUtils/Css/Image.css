@@ -56,6 +56,8 @@
     display: block;
     width: 80%;
     max-width: 700px;
+    /* For transparent images: */
+    background-color: rgb(255, 255, 255, 1);
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
