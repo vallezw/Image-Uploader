@@ -1,12 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
-import { useHistory } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
-
 
 // Components
 import StyledDropzone from './StyledDropzone'
@@ -44,45 +39,19 @@ const useStyles = makeStyles({
 });
 
 
-export default function ImageUploadCard() {
+export default function ImageUploadCard(props) {
   const classes = useStyles();
-
-  // History for pushing to a new link after uploading image
-  const history = useHistory(); 
-
-  const [loading, setLoading] = useState(false)
-
-
-  const handleLoading = () => {
-    setLoading(true)
-  }
-
-  const handleResponse = (value) => {
-    // Router push to uploadd page
-    setTimeout(() => {
-      setLoading(false)
-      history.push(value.data.filePath)
-      Swal.fire({
-        icon: 'success',
-        title: "Your image was uploaded!",
-        showConfirmButton: false,
-        timer: 1500
-      })
-    }, 2000)
-    
-  }
-
 
   return (
     <div>
-      {!loading? 
+      {!props.loading? 
         <div className="cardContainer"> 
           <Card className={classes.root}>
             <CardContent>
               <p className={classes.headerText}>Upload your image</p>
               <p className={classes.subheaderText}>File should be Jpeg, Png, ...</p>
-              <StyledDropzone handleLoading={handleLoading} handleResponse={handleResponse} />
-              <UploadButton handleLoading={handleLoading} handleResponse={handleResponse} />
+              <StyledDropzone handleLoading={props.handleLoading} handleResponse={props.handleResponse} />
+              <UploadButton handleLoading={props.handleLoading} handleResponse={props.shandleResponse} />
             </CardContent>
           </Card>
         </div>
