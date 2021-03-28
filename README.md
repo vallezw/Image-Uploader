@@ -23,6 +23,7 @@
 
 
 
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
@@ -79,7 +80,7 @@ You may also suggest changes by forking this repo and creating a pull request or
 
 ### Built With
 
-This section should list any major frameworks that you built your project using.
+Here a list of the major frameworks I used for this project.
 * [React](https://reactjs.org/)
 * [Express](https://expressjs.com/de/)
 * [Material-UI](https://material-ui.com/)
