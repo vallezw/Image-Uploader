@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 import { sendRequest } from '../../Utils/sendRequest'
@@ -39,6 +39,16 @@ const textStyle = {
   fontSize: "14px"
 }
 
+const divStyle = {
+  float:"left",
+  position:"absolute",
+  marginTop: "56px",
+  marginRight: "10px",
+  padding:"20px",
+  color:"#FFFFFF",
+  cursor: "pointer"
+}
+
 
 export default function StyledDropzone(props) {
     const {
@@ -60,11 +70,25 @@ export default function StyledDropzone(props) {
       isDragReject,
       isDragAccept
     ]);
+
+    const inputFile = useRef(null) 
+
+    const handleChange = event => {
+      const fileUploaded = event.target.files[0];
+      sendRequest(fileUploaded, props.handleLoading, props.handleResponse)
+    }
+
+    const onDivClick = () => {
+      inputFile.current.click();
+  }
   
     return (
       <div className="container">
         <div {...getRootProps({style})}>
           <p style={textStyle}>Drag 'n' drop your image here</p>
+          <div style={divStyle} onClick={onDivClick}>
+            <input type='file' id='file' ref={inputFile} style={{display: 'none'}} onChange={handleChange}/>
+          </div>
           <img src={goingUpImage} alt="goingUpImage" style={{width: "150px"}} />
         </div>
       </div>
