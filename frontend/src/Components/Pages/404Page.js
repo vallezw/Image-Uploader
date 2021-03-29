@@ -1,8 +1,6 @@
 import React from 'react'
 import Navbar from '../ComponentUtils/Headers/Navbar'
 
-import image from '../../Images/404.svg'
-
 import './Css/404Page.css'
 
 function FZF() {
