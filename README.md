@@ -76,9 +76,9 @@
 ![Example Video](docs/images/example-video.gif)
 <!-- <img src="docs/images/screenshot.png" alt="Logo" width="6000"> -->
 
-There are already a few image uploader out there in the internet, however, I didn't find any uploader which is fully open source, lightweight and made for self hosting. So I created one myself and hope you can enjoy it.
+There are already a few image uploader out there in the internet, however, I didn't find any uploader which is fully open source, lightweight and made for self hosting. So I created one myself and hope you enjoy it.
 
-You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this project!
+You may also suggest changes by forking this repo and creating a [pull request](https://github.com/vallezw/Image-Uploader/compare) or opening an [issue](https://github.com/vallezw/Image-Uploader/issues/new/choose). Thanks to all the people have have contributed to expanding this project!
 
 ### Built With
 
@@ -90,11 +90,11 @@ Here a list of the major frameworks I used for this project.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-There are 2 ways on how to host this project. You can either use [docker](https://www.docker.com/) or host it with [node](https://nodejs.org/en/). I would highly suggest hosting it with docker since it's more effective for your system.
+There are two ways on how to host this project. You can either use [docker](https://www.docker.com/) or host it with [node](https://nodejs.org/en/). I would highly suggest hosting it with docker since it's more flexible.
 
 ### Hosting it with Docker
 #### Setting it up
-In order to host the project you will need to create a docker-compose file, docker-compose files are combining multiple docker images to interact with each other.
+In order to host the project you will need to create a docker-compose file. These files are combining multiple docker images to interact with each other.
 
 The file needs to be called `docker-compose.yml` paste the following code in the file.
 
@@ -176,7 +176,7 @@ Contributions are what make the open source community such an amazing place to b
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a [Pull Request](https://github.com/vallezw/Image-Uploader/compare)
 
 <!-- LICENSE -->
 ## License
@@ -186,6 +186,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Valentin Zwerschke - [github.com/vallezw](https://github.com/vallezw) - v.zwerschke@mail.de
+Valentin Zwerschke - [@vallezw](https://github.com/vallezw)
 
 Project Link: [github.com/vallezw/Image-Uploader](https://github.com/vallezw/Image-Uploader)
