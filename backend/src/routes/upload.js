@@ -19,7 +19,7 @@ router.post(endpoints.UPLOAD_FILE, (req, res) => {
     fileEnding = fileEnding[fileEnding.length - 1]
     fileName = generateId() + '.' + fileEnding
     
-    file.mv(`${__dirname}/../..` + endpoints.UPLOAD_STATIC_DIRECTORY + `/${fileName}`, err => {
+    file.mv(`${__dirname}/..` + endpoints.UPLOAD_STATIC_DIRECTORY + `/${fileName}`, err => {
         if(err) {
             console.error(err);
             return res.status(500).send(err);
