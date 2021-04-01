@@ -1,11 +1,13 @@
-const express, { Router } = require('express');
-const generateId = require("shortid")
+const generateId = require("shortid");
+const express = require('express');
+const { Router } = require('express');
+const { endpoints } = require('../constants');
 
 const router = Router();
 
-router.use('/upload', express.static( __dirname + '/upload'));
+router.use(endpoints.UPLOAD_STATIC_DIRECTORY, express.static( __dirname + endpoints.UPLOAD_STATIC_DIRECTORY));
 
-router.post('/upload', (req, res) => {
+router.post(endpoints.UPLOAD_FILE, (req, res) => {
     if(req.files === null){
         console.log('No file uploaded');
         return res.status(400).json({ msg: 'No file uploaded' });

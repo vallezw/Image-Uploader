@@ -1,5 +1,5 @@
 const express = require('express');
-const { applyMiddlewares } = require('./middlewares');
+const initiateResources = require('./utils/initiate-resources');
 
 class Server {
     _port;
@@ -11,7 +11,7 @@ class Server {
     }
 
     start() {
-        applyMiddlewares();
+        initiateResources(this._app);
         this._app.listen(this._port, () => console.log(`Server is running on port ${this._port}`));
     }
 }
