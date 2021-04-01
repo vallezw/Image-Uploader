@@ -8,7 +8,6 @@ const initiateResources = (app) => {
     renderRoutes(app);
 
     if(process.env.REMOVE_IMAGES === 'true') {
-        console.log('yy');
         removeImages();
     };
 };

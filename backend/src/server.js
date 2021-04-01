@@ -12,6 +12,7 @@ class Server {
 
     start() {
         initiateResources(this._app);
+        this._app.use('/upload', express.static( __dirname + '/upload'));
         this._app.listen(this._port, () => console.log(`Server is running on port ${this._port}`));
     }
 }
