@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Grow from '@material-ui/core/Grow';
 
 // Components
 import StyledDropzone from './StyledDropzone'
@@ -41,11 +42,12 @@ const useStyles = makeStyles({
 
 export default function ImageUploadCard(props) {
   const classes = useStyles();
-
+  const checked = true
   return (
     <div>
       {!props.loading? 
         <div className="cardContainer"> 
+         <Grow in={checked}>
           <Card className={classes.root}>
             <CardContent>
               <p className={classes.headerText}>Upload your image</p>
@@ -54,6 +56,7 @@ export default function ImageUploadCard(props) {
               <UploadButton handleLoading={props.handleLoading} handleResponse={props.shandleResponse} />
             </CardContent>
           </Card>
+          </Grow>
         </div>
       :
         <div className="loadingContainer">
