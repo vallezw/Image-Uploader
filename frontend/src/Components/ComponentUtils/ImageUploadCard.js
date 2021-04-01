@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 // Components
 import StyledDropzone from './StyledDropzone'
 import UploadButton from './UploadButton'
-import Loading from './Loading';
+import Loading from './LoadingAnimation/Loading';
 
 import '../../App.css'
 

@@ -38,7 +38,7 @@ function UploadPage() {
         showConfirmButton: false,
         timer: 1500
       })
-    }, 2000)    
+    }, 1400)    
   }
 
     const handlePaste = (event) => {
