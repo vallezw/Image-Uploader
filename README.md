@@ -148,7 +148,11 @@ This is the option for those who don't want to host it with docker.
    ```sh
    cd backend/
    ```
-2. Build and run it
+2. Install the npm serve package to host the project
+   ```sh
+   npm install -g serve
+   ```
+3. Build and run it
    ```sh
    npm run build
    ```
