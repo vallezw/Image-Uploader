@@ -1,4 +1,5 @@
 const express = require('express');
+const { applyMiddlewares } = require('./middlewares');
 
 class Server {
     _port;
@@ -10,8 +11,9 @@ class Server {
     }
 
     start() {
+        applyMiddlewares();
         this._app.listen(this._port, () => console.log(`Server is running on port ${this._port}`));
     }
 }
 
-module.exports = { Server };
+module.exports = Server;
