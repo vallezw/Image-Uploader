@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js",
     "client": "npm run dev --prefix ../frontend",
     "client-build": "cd ../frontend && npm run build && serve -s build -l 80",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "find-remove": "^2.0.3",
