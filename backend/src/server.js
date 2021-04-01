@@ -1,6 +1,6 @@
 const express = require('express');
 
-export class Server {
+class Server {
     _port;
     _app;
 
@@ -13,3 +13,5 @@ export class Server {
         this._app.listen(this._port, () => console.log(`Server is running on port ${this._port}`));
     }
 }
+
+module.exports = { Server };
