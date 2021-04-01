@@ -4,4 +4,9 @@ const endpoints = {
     DOWNLOAD_FILE: '/download/:id'
 };
 
-module.exports = { endpoints };
+const time = {
+    HOURS_24: 86400000,
+    WEEK_1: 604800000
+};
+
+module.exports = { endpoints, time };
