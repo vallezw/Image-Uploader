@@ -1,7 +1,7 @@
 .cardContainer {
     position: absolute;
     top: 40%;
-    left: 48%;
+    left: 48.8%;
     margin: -100px 0 0 -150px;
 }
 
@@ -18,8 +18,44 @@ body {
 }
 
 
-@media screen and (max-height: 780px) {
+@media screen and (max-height: 750px) {
   body {
-    zoom: 50%;
+    zoom: 90%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  body {
+    zoom: 85%;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  body {
+    zoom: 80%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  body {
+    zoom: 75%;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  body {
+    zoom: 70%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  body {
+    zoom: 65%;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  body {
+    zoom: 60%;
   }
 }
